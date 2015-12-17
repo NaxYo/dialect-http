@@ -10,13 +10,15 @@
     "colors": "0.5.0",
     "connect": "1.5.1",
     "connect-auth": "0.2.3",
-    "connect-mongodb": "1.0.0",
+    "connect-mongodb": "^1.1.5",
     "dialect": "git://github.com/rgfcg/dialect.git",
     "express": "2.4.0",
     "funk": "1.5.0",
     "jade": "0.12.4",
     "mongodb": "^2.0.52",
-    "paginate-js": "0.0.1"
+    "paginate-js": "0.0.1",
+    "underscore": "^1.8.3",
+    "underscore-deep-extend": "0.0.5"
   },
   "engines": {
     "node": ">= 0.4.0"

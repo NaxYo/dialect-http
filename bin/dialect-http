@@ -6,6 +6,8 @@
  */
 
 require('colors');
+var _ = require('underscore');
+_.mixin({ deepExtend: require('underscore-deep-extend')(_) });
 
 var path = require('path'),
     _lib_path = path.join(__dirname, '..', 'lib'),
@@ -45,7 +47,8 @@ while (_args.length) {
       if (arg[0] !== '/') {
         arg = path.normalize(path.join(process.cwd(), arg));
       }
-      _dialect_http.options = _utils.merge(_dialect_http.options, require(arg));
+
+      _dialect_http.options = _.deepExtend({}, _dialect_http.options, require(arg));
     } else {
       throw Error('--config requires an path');
     }
