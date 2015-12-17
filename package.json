@@ -7,16 +7,18 @@
     "dialect-http": "./bin/dialect-http"
   },
   "dependencies": {
+    "colors": "0.5.0",
     "connect": "1.5.1",
     "connect-auth": "0.2.3",
     "connect-mongodb": "1.0.0",
-    "colors": "0.5.0",
-    "dialect" : "git://github.com/rgfcg/dialect.git",
+    "dialect": "git://github.com/rgfcg/dialect.git",
     "express": "2.4.0",
     "funk": "1.5.0",
     "jade": "0.12.4",
-    "mongodb": "latest",
+    "mongodb": "^2.0.52",
     "paginate-js": "0.0.1"
   },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": {
+    "node": ">= 0.4.0"
+  }
 }
