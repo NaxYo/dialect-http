@@ -33,7 +33,7 @@ input(type= 'hidden', name= 'base_locale', value= dialect.config('base_locale'),
   form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_approve ? ' can_approve' : ''), autocomplete= 'off')
     input(type= 'hidden', name= 'id', value= translation._id)
     .original
-      = translation.original
+      = translation.en || translation.original
     textarea.translation(name= 'translation')= translation.translation || ''
 
     .options
