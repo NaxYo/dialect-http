@@ -37,18 +37,18 @@ input(type= 'hidden', name= 'base_locale', value= dialect.config('base_locale'),
     textarea.translation(name= 'translation')= translation.translation || ''
 
     .options
-      a.get_original(href= '#')
-        span get original
-      a.autotranslate(href= '#')
-        span autotranslate
+     //- a.get_original(href= '#')
+        //- span get original
+     //- a.autotranslate(href= '#')
+        //- span autotranslate
       a.clean(href= '#')
         span clean
       a.reject(href= '#')
         span reject
       a.approve(href= '#')
         span approve
-      a.delete(href="#")
-        span delete
+      //- a.delete(href="#")
+        //- span delete
     .meta
       -if (translation.context)
         span.context
