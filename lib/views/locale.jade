@@ -1,6 +1,6 @@
-extends ../../layout.jade
+extends ./layout.jade
 
-block content
+block body
   input(type= 'hidden', name= 'current_locale', value= locale, id= 'current_locale')
   input(type= 'hidden', name= 'base_locale', value= dialect.config('base_locale'), id= 'base_locale')
 
@@ -40,9 +40,9 @@ block content
       textarea.translation(name= 'translation')= translation.translation || ''
 
       .options
-       //- a.get_original(href= '#')
+        //- a.get_original(href= '#')
           //- span get original
-       //- a.autotranslate(href= '#')
+        //- a.autotranslate(href= '#')
           //- span autotranslate
         a.clean(href= '#')
           span clean
