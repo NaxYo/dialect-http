@@ -1,12 +1,15 @@
-form(action= '/auth/form/', method= 'post', style= 'width= 160px;margin= 0 auto;height=auto;')
-  fieldset
-    .field
-      label(for= 'username') Email
-      input(id=  'username', name= 'username', value= '', type= 'text')
+extends ../../layout.jade
 
-    .field
-      label(for= 'password') Password
-      input(id=  'password', name= 'password', value= '', type= 'password')
+block content
+    form(action= '/auth/form/', method= 'post', style= 'width= 160px;margin= 0 auto;height=auto;')
+      fieldset
+        .field
+          label(for= 'username') Email
+          input(id=  'username', name= 'username', value= '', type= 'text')
 
-  .operations
-      input.button(type= 'submit', value= 'Login')
+        .field
+          label(for= 'password') Password
+          input(id=  'password', name= 'password', value= '', type= 'password')
+
+      .operations
+          input.button(type= 'submit', value= 'Login')

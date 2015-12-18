@@ -1,4 +1,3 @@
-!!!
 html
   head
     title= title || ''
@@ -11,7 +10,7 @@ html
   body
     nav#header
       .wrapper
-        a#logo(href= '/')= options.title || 'dialect'
+        a#logo(href= '/')= title || 'dialect'
         a#logout(href= '/auth/logout') logout
         ul#locales
           -each loc in authorized_locales
@@ -35,3 +34,4 @@ html
                     li= msg
 
         != body
+        block content

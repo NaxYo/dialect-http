@@ -1,7 +1,7 @@
 h1 Dashboard
 
-- each locale in dialect.config('locales')
-  -if(locale !== dialect.config('base_locale'))
+- each locale in locales
+  -if(locale !== base_locale)
     h2= locale
 
     -// TODO: Move this crap
