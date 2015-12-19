@@ -14,10 +14,9 @@ html
         a#logout(href= '/auth/logout') logout
         ul#locales
           -each loc in authorized_locales
-            -if (loc !== dialect.config('base_locale'))
-              li
-                a(href= '/' + loc + '/all/', class= loc === locale ? 'selected' : '')
-                  = loc
+            li
+              a(href= '/' + loc + '/all/', class= loc === locale ? 'selected' : '')
+                = loc
     .clearer
 
     .wrapper

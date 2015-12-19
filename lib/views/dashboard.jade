@@ -3,7 +3,7 @@ extends ./layout.jade
 block body
   h1 Dashboard
 
-  - each locale in locales
+  - each locale in authorized_locales
     -if(locale !== base_locale)
       h2= locale
 
