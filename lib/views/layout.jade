@@ -10,7 +10,9 @@ html
   body
     nav#header
       .wrapper
-        a#logo(href= '/')= title || 'dialect'
+        a#logo(href= '/')
+            img(src= logo, height= '44')
+            span  | Translation platform
         a#logout(href= '/auth/logout') logout
         ul#locales
           -each loc in authorized_locales

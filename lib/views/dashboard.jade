@@ -5,20 +5,21 @@ block body
 
   - each locale in authorized_locales
     -if(locale !== base_locale)
-      h2= locale
+      h2
+        = locale
 
-      -// TODO: Move this crap
-      -var stat = stats[locale] || {ok: 0, missing: 0, pending: 0};
-      -var count = stat.ok + stat.pending + stat.missing;
-      -var percent_ok = count ? (stat.ok / count) * 100 : 0;
-      -var percent_pending = count ? (stat.pending / count) * 100 : 0;
-      -var percent_missing = count ? (stat.missing / count) * 100 : 0;
+        .right
+          -// TODO: Move this crap
+          -var stat = stats[locale] || {ok: 0, missing: 0, pending: 0};
+          -var count = stat.ok + stat.pending + stat.missing;
+          -var percent_ok = count ? (stat.ok / count) * 100 : 0;
+          -var percent_pending = count ? (stat.pending / count) * 100 : 0;
+          -var percent_missing = count ? (stat.missing / count) * 100 : 0;
 
-      h3.bars
-        = count + ' strings, '
-        = stat.ok + ' translated, '
-        = stat.pending + ' pending, '
-        = count - stat.ok - stat.pending + ' missing'
+          = count + ' strings, '
+          = stat.ok + ' translated, '
+          = stat.pending + ' pending, '
+          = count - stat.ok - stat.pending + ' missing'
       div.bars
         a.ok(href= '/' + locale + '/ok/', style= 'width:' + percent_ok + '%;') &nbsp
         a.pending(href= '/' + locale + '/pending/', style= 'width:' + percent_pending + '%;') &nbsp

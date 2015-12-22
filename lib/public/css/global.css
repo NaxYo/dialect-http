@@ -1,30 +1,33 @@
 body {
   font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
-  background: #fff url(/images/bg.png) repeat 0px 0px;
+  background: #323B4C;
 }
 
 h1 {
   font-size: 18px;
   font-weight: normal;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #1E232D;
   padding: 5px;
   margin-bottom: 25px;
-  background: #eee;
-  text-shadow: 0px 1px 0px #fff;
+}
+
+h1#breadcrumbs {
+  margin-bottom: 0;
 }
 
 h2 {
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
-  text-shadow: 0px 1px 0px #fff;
 }
 
 h3 {
   font-size: 14px;
   font-weight: normal;
-  color: #777;
-  text-shadow: 0px 1px 0px #fff;
+}
+
+.right {
+  float: right;
 }
 
 nav#header {
@@ -40,9 +43,12 @@ nav#header #logo {
   font-family: 'Georgia', 'Times New Roman', 'serif';
   font-size: 36px;
   float:left;
-  text-shadow: 1px 1px 0px #bbb;
   margin-top: 10px;
   text-decoration: none;
+}
+
+nav#header #logo span {
+  vertical-align: top;
 }
 
 nav#header #logout {
@@ -59,26 +65,18 @@ nav#header ul li{
   display:inline-block;
 }
 
+.paginator a,
+.paginator span,
 nav#header ul li a{
   display:inline-block;
   padding:5px 10px;
   margin:0px 3px;
-  color: #666;
-  text-shadow: 0px 1px 0px solid #fff;
+  color: #EEE;
+  border:1px solid #FFF;
   text-decoration: none;
-  background: #e8e8e8 url(/images/button.png) repeat-x top left;
-  border-left:1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-bottom:1px solid #aaa;
-  border-right: 1px solid #aaa;
-  -webkit-border-radius: 2px;
-  -moz-border-radius:    2px;
-  border-radius:         2px;
-  -moz-box-shadow:   inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow:inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:        inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+.paginator a:hover,
 nav#header ul li a:hover {
   border-left:1px solid #aaa;
   border-top: 1px solid #aaa;
@@ -86,17 +84,14 @@ nav#header ul li a:hover {
   border-right: 1px solid #888;
 }
 
+.paginator span.current,
 nav#header ul li a.selected{
-  position: relative;
-  top: 1px;
-  background: #e8e8e8 url(/images/button_pressed.png) repeat-x top left;
-  border-left:1px solid #aaa;
-  border-top: 1px solid #aaa;
-  border-bottom:1px solid #ccc;
-  border-right: 1px solid #ccc;
-  -moz-box-shadow:   1px 1px 0px #fff;
-  -webkit-box-shadow:1px 1px 0px #fff;
-  box-shadow:        1px 1px 0px #fff;
+  background: rgba(255, 255, 255, .2);
+}
+
+.paginator {
+  text-align: center;
+  margin: 20px 0px;
 }
 
 h1.bars {
@@ -107,7 +102,6 @@ div.bars {
   border: none;
   float:left;
   width: 960px;
-  background: #e8e8e8 url(/images/button_pressed.png) repeat-x top left;
   margin-bottom: 20px;
 }
 
@@ -118,15 +112,15 @@ div.bars a {
 }
 
 div.bars a.ok {
-  background:url("/images/form-ok.png") repeat-x scroll left top;
+  background: #52FF78;
 }
 
 div.bars a.pending {
-  background:url("/images/form-pending.png") repeat-x scroll left top;
+  background: #FFFF83;
 }
 
 div.bars a.missing {
-  background:url("/images/form-missing.png") repeat-x scroll left top;
+  background: #FB828A;
 }
 
 .wrapper {
@@ -145,33 +139,26 @@ h2.title {
 form {
   padding:10px;
   margin:10px 0px 0px 0px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius:    2px;
-  border-radius:         2px;
   position:relative;
   float:left;
-  border: 1px solid #bbb;
   width: 938px;
-  -moz-box-shadow:   inset 1px 1px 0px #fff;
-  -webkit-box-shadow:inset 1px 1px 0px #fff;
-  box-shadow:        inset 1px 1px 0px #fff;
-  background: transparent url(/images/form-ok.png) repeat-x top left;
 }
 
 form.ok {
-  background: transparent url(/images/form-ok.png) repeat-x top left;
+  background: #E5EFE7;
 }
 
 form.pending {
-  background: transparent url(/images/form-pending.png) repeat-x top left;
+  background: #FFFFEB;
 }
 
 form.missing {
-  background: transparent url(/images/form-missing.png) repeat-x top left;
+  background: #F3E0E2;
 }
 
 .original ,
 textarea.translation {
+  color: #333;
   font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
   font-size:12px;
   width:378px;
@@ -179,10 +166,6 @@ textarea.translation {
   float:left;
   padding:10px;
   min-height: 32px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius:    2px;
-  border-radius:         2px;
-  border: 1px solid rgba(0,0,0,0.2);
 }
 
 .full-width .original ,
@@ -192,15 +175,6 @@ textarea.translation {
 
 .full-width textarea.translation {
     margin-right:0;
-}
-
-textarea.translation {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.original {
-  border: 1px solid rgba(90,90,90,0.1);
-  background: rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -220,18 +194,9 @@ input {
   margin-bottom: 10px;
 }
 
-textarea.translation {
-}
-
-textarea.translation:hover {
-  border-top: 1px solid #9ab;
-  border-left:1px solid #9ab;
-}
-
 textarea.translation:focus {
   border-top:1px solid #aaa;
   border-left:1px solid #aaa;
-  background:#ffe;
 }
 
 .options {
@@ -241,22 +206,15 @@ textarea.translation:focus {
 
 .options a,
 input.button {
-  background: transparent url(/images/button.png) repeat-x top left;
-  padding: 3px 3px 3px 0px;
+  background: #FFF;
+  padding: 3px;
   display: block;
   margin: 0px;
-  font-size: 11px;
+  font-size: 14px;
   color: #555;
-  text-shadow: 0px 1px 0px #fff;
   text-decoration: none;
   margin-bottom: 2px;
-  border: 1px solid #aaa;
-  -webkit-border-radius: 2px;
-  -moz-border-radius:    2px;
-  border-radius:         2px;
-  -moz-box-shadow:   inset 1px 1px 0px #fff;
-  -webkit-box-shadow:inset 1px 1px 0px #fff;
-  box-shadow:        inset 1px 1px 0px #fff;
+  border: 1px solid #DCDCDC;
 }
 
 .options a:hover {
@@ -317,50 +275,6 @@ form .options a.reject span{
   background:url("/images/x.png") no-repeat scroll 0 50% transparent;
 }
 
-.paginator {
-  text-align: center;
-  margin: 20px 0px;
-}
-
-.paginator a {
-  display:inline-block;
-  padding:5px 10px;
-  margin:0px 3px;
-  color: #666;
-  text-shadow: 0px 1px 0px solid #fff;
-  text-decoration: none;
-  background: #e8e8e8 url(/images/button.png) repeat-x top left;
-  border-left:1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-bottom:1px solid #aaa;
-  border-right: 1px solid #aaa;
-  -webkit-border-radius: 2px;
-  -moz-border-radius:    2px;
-  border-radius:         2px;
-  -moz-box-shadow:   inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow:inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:        inset 1px 1px 0px #fff, 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.paginator span {
-  display:inline-block;
-  padding:5px 10px;
-  margin:0px 3px;
-  color: #666;
-  text-shadow: 0px 1px 0px solid #fff;
-  text-decoration: none;
-  position: relative;
-  top: 1px;
-  background: #e8e8e8 url(/images/button_pressed.png) repeat-x top left;
-  border-left:1px solid #aaa;
-  border-top: 1px solid #aaa;
-  border-bottom:1px solid #ccc;
-  border-right: 1px solid #ccc;
-  -moz-box-shadow:   1px 1px 0px #fff;
-  -webkit-box-shadow:1px 1px 0px #fff;
-  box-shadow:        1px 1px 0px #fff;
-}
-
 .box {
   padding: 20px;
 }
@@ -376,9 +290,5 @@ form .options a.reject span{
 .box.error {
   color: #fff;
   background: #b22;
-  border:5px solid #c22;
-  -moz-box-shadow:   inset 1px 1px 2px #d44, 0px 0px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow:inset 1px 1px 2px #d44, 0px 0px 3px rgba(0, 0, 0, 0.3);
-  box-shadow:        inset 1px 1px 2px #d44, 0px 0px 3px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
