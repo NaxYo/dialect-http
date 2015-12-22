@@ -9,7 +9,6 @@ block body
         = locale
 
         .right
-          -// TODO: Move this crap
           -var stat = stats[locale] || {ok: 0, missing: 0, pending: 0};
           -var count = stat.ok + stat.pending + stat.missing;
           -var percent_ok = count ? (stat.ok / count) * 100 : 0;

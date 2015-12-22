@@ -1,10 +1,10 @@
 extends ../../layout.jade
 
 block body
-  form(action= '/auth/form/', method= 'post', style= 'width= 160px;margin= 0 auto;height=auto;')
+  form(action= '/auth/form/', method= 'post', style= 'margin-top: 30px')
     fieldset
       .field
-        label(for= 'username') Email
+        label(for= 'username') User
         input(id=  'username', name= 'username', value= '', type= 'text')
 
       .field
