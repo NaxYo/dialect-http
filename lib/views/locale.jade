@@ -34,6 +34,7 @@ block body
     -var stat = translation.translation ? (translation.approved ? 'ok' : 'pending') : 'missing';
     form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_approve ? ' can_approve' : ''), autocomplete= 'off')
       input(type= 'hidden', name= 'id', value= translation._id)
+      input(type= 'hidden', name= 'original', value= translation.original)
       .original
         = translation.en || translation.original
       textarea.translation(name= 'translation')= translation.translation || ''
