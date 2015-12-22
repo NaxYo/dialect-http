@@ -60,6 +60,8 @@ nav#header #logout {
 nav#header ul{
   text-align:right;
   padding-top:28px;
+  width: 263px;
+  float: right;
 }
 nav#header ul li{
   display:inline-block;
