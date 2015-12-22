@@ -6,7 +6,7 @@ block body
 
   -if (category !== 'All')
     h1#breadcrumbs
-      = '&raquo; ' + category
+      = '>> ' + category
 
       - if (locale !== dialect.config('base_locale'))
         -var percent_ok = count ? (count_ok / count) * 100 : 0;
