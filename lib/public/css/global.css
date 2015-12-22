@@ -152,7 +152,6 @@ form {
   float:left;
   border: 1px solid #bbb;
   width: 938px;
-  height: 110px;
   -moz-box-shadow:   inset 1px 1px 0px #fff;
   -webkit-box-shadow:inset 1px 1px 0px #fff;
   box-shadow:        inset 1px 1px 0px #fff;
@@ -175,15 +174,24 @@ form.missing {
 textarea.translation {
   font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
   font-size:12px;
-  width:367px;
+  width:378px;
   margin-right: 20px;
   float:left;
-  height:55px;
   padding:10px;
+  min-height: 32px;
   -webkit-border-radius: 2px;
   -moz-border-radius:    2px;
   border-radius:         2px;
   border: 1px solid rgba(0,0,0,0.2);
+}
+
+.full-width .original ,
+.full-width textarea.translation {
+    width:448px;
+}
+
+.full-width textarea.translation {
+    margin-right:0;
 }
 
 textarea.translation {
