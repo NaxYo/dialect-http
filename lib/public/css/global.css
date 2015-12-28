@@ -60,11 +60,12 @@ nav#header #logout {
 nav#header ul{
   text-align:right;
   padding-top:28px;
-  width: 263px;
+  width: 335px;
   float: right;
 }
 nav#header ul li{
   display:inline-block;
+  margin-bottom: 5px;
 }
 
 .paginator a,
