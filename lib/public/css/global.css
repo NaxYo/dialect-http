@@ -126,6 +126,11 @@ div.bars a.missing {
   background: #FB828A;
 }
 
+.page-options button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .wrapper {
   width:960px;
   margin:0 auto;
@@ -159,25 +164,26 @@ form.missing {
   background: #F3E0E2;
 }
 
-.original ,
+.original,
 textarea.translation {
   color: #333;
   font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
   font-size:12px;
-  width:378px;
-  margin-right: 20px;
+  width:380px;
   float:left;
   padding:10px;
   min-height: 32px;
 }
 
-.full-width .original ,
-.full-width textarea.translation {
-    width:448px;
+form button.copy {
+  width: 17px;
+  float: left;
+  height: 52px;
+  margin-right: 10px;
 }
 
-.full-width textarea.translation {
-    margin-right:0;
+textarea.translation {
+  margin-right: 10px;
 }
 
 label {
@@ -186,7 +192,8 @@ label {
   padding-right: 15px;
 }
 
-input {
+input,
+button {
   font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
   font-size:12px;
   padding:5px;
@@ -205,6 +212,7 @@ textarea.translation:focus {
   width:120px;
 }
 
+button,
 .options a,
 input.button {
   background: #FFF;
@@ -218,6 +226,7 @@ input.button {
   border: 1px solid #DCDCDC;
 }
 
+button:hover,
 .options a:hover {
   color: #555;
   border: 1px solid #777;

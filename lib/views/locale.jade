@@ -30,6 +30,13 @@ block body
 
   .clearer
 
+  if can_approve
+    div.page-options
+      button.copy-all Copy all
+      button.approve-all Approve all
+
+    .clearer
+
   -each translation in translations
     -var stat = translation.translation ? (translation.approved ? 'ok' : 'pending') : 'missing';
     form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_approve ? ' can_approve' : ''), autocomplete= 'off')
@@ -37,21 +44,17 @@ block body
       input(type= 'hidden', name= 'original', value= translation.original)
       .original
         = translation.en || translation.original
+      button.copy &raquo;
       textarea.translation(name= 'translation')= translation.translation || ''
 
       .options
-        //- a.get_original(href= '#')
-          //- span get original
-        //- a.autotranslate(href= '#')
-          //- span autotranslate
         a.clean(href= '#')
           span clean
         a.reject(href= '#')
           span reject
         a.approve(href= '#')
           span approve
-        //- a.delete(href="#")
-          //- span delete
+
       .meta
         -if (translation.context)
           span.context
