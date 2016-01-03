@@ -1,0 +1,28 @@
+-var stat = translation.translation ? (translation.approved ? 'ok' : 'pending') : 'missing';
+form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_approve ? ' can_approve' : ''), autocomplete= 'off')
+  input(type= 'hidden', name= 'id', value= translation._id)
+  input(type= 'hidden', name= 'original', value= translation.original)
+  .original
+    = translation.en || translation.original
+  button.copy &raquo;
+  textarea.translation(name= 'translation')= translation.translation || ''
+
+  .options
+    a.clean(href= '#')
+      span clean
+    a.reject(href= '#')
+      span reject
+    a.approve(href= '#')
+      span approve
+
+  .meta
+    -if (translation.context)
+      span.context
+        |  Context:
+        = translation.context
+
+    -if (translation.plural)
+      span.plural
+        |  Plural form:
+        = translation.plural
+.clearer

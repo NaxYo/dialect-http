@@ -131,6 +131,17 @@ div.bars a.missing {
   margin-right: 10px;
 }
 
+.page-options input {
+  float: right;
+  width: 200px;
+  margin-bottom: 0;
+}
+
+.results > p{
+  margin-top: 20px;
+  text-align: center;
+}
+
 .wrapper {
   width:960px;
   margin:0 auto;
