@@ -4,15 +4,15 @@ form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_ap
   input(type= 'hidden', name= 'original', value= translation.original)
   .original
     = translation.en || translation.original
-  button.copy &raquo;
+  button.copy(tabindex= '-1') &raquo;
   textarea.translation(name= 'translation')= translation.translation || ''
 
   .options
-    a.clean(href= '#')
+    a.clean(href= '#', tabindex= '-1')
       span clean
-    a.reject(href= '#')
+    a.reject(href= '#', tabindex= '-1')
       span reject
-    a.approve(href= '#')
+    a.approve(href= '#', tabindex= '-1')
       span approve
 
   .meta
