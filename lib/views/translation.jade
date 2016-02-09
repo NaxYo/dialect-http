@@ -3,7 +3,10 @@ form(action= '/' + locale + '/translate/', method= 'POST', class= stat + (can_ap
   input(type= 'hidden', name= 'id', value= translation._id)
   input(type= 'hidden', name= 'original', value= translation.original)
   .original
-    = translation.en || translation.original
+    span
+      = translation.en || translation.original
+    .key
+      = translation.original
   button.copy(tabindex= '-1') &raquo;
   textarea.translation(name= 'translation')= translation.translation || ''
 

@@ -175,6 +175,7 @@ form.missing {
   background: #F3E0E2;
 }
 
+.key,
 .original,
 textarea.translation {
   color: #333;
@@ -184,6 +185,22 @@ textarea.translation {
   float:left;
   padding:10px;
   min-height: 32px;
+  position: relative;
+}
+
+.original > .key {
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.original:hover > span {
+  visibility: hidden;
+}
+
+.original:hover > .key {
+  visibility: initial;
 }
 
 form button.copy {
