@@ -1,0 +1,10 @@
+- var filters = dialect.config('filters');
+div
+  h1 Translation filters
+
+if filters
+  div.filters-buttons
+    -each filter in filters
+      a.filter-button(href= '/set-filter/' + filter.id)= filter.name
+else
+  span No filter yet ...
