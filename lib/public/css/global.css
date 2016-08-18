@@ -80,7 +80,8 @@ nav#header ul li a{
 }
 
 .paginator a:hover,
-nav#header ul li a:hover {
+nav#header ul li a:hover,
+a.filter-button:hover {
   border-left:1px solid #aaa;
   border-top: 1px solid #aaa;
   border-bottom:1px solid #888;
@@ -88,7 +89,8 @@ nav#header ul li a:hover {
 }
 
 .paginator span.current,
-nav#header ul li a.selected{
+nav#header ul li a.selected,
+a.filter-button.selected {
   background: rgba(255, 255, 255, .2);
 }
 
@@ -330,3 +332,15 @@ form .options a.reject span{
   background: #b22;
   margin-bottom: 20px;
 }
+
+div.filters-buttons {
+  text-align: center;
+}
+
+a.filter-button {
+  border: 1px solid #FFF;
+  padding: 10px;
+  margin: 0 5px 0 5px;
+}
+
+
