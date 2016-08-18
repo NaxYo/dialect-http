@@ -14,29 +14,31 @@ module.exports = {
   port: 3001,
 
   dialect: {
-    filters: [
-      { id: 'editor',
+    filters: {
+      'editor': {
         name: 'Editor filter',
+        url:'editor',
         search_term: [
-          'editor', // put a Regexp
-          'editor.things.thing'
+           '(^editor)+([\\.+\\w]+)'
         ]
       },
-      { id: 'mails',
+      'mails': {
         name: 'Mails filter',
+        url:'mails',
         search_term: [
-          'mails', // put a Regexp
+          new RegExp('(^mails)+([\.+\w]+)', 'i'),
           'mails.things.thing'
         ]
       },
-      { id: 'another',
+      'another': {
         name: 'Another filter',
+        url:'another',
         search_term: [
-          'what', // put a Regexp
+          new RegExp('(^another)+([\.+\w]+)', 'i'),
           'what.what.what'
         ]
       }
-    ],
+    },
     locales: ['en', 'fr'],
     store: {
       mongodb: {

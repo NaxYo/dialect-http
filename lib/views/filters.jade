@@ -5,6 +5,9 @@ div
 if filters
   div.filters-buttons
     -each filter in filters
-      a.filter-button(href= '/set-filter/' + filter.id)= filter.name
+      a.filter-button(href= '/set-filter/' + filter.url)= filter.name
+  div.filter-unset
+      a.unset-button(href= '/unset-filter') Unset filter
+
 else
   span No filter yet ...

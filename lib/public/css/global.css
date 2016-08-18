@@ -81,7 +81,9 @@ nav#header ul li a{
 
 .paginator a:hover,
 nav#header ul li a:hover,
-a.filter-button:hover {
+a.filter-button:hover,
+a.unset-button:hover
+ {
   border-left:1px solid #aaa;
   border-top: 1px solid #aaa;
   border-bottom:1px solid #888;
@@ -333,11 +335,19 @@ form .options a.reject span{
   margin-bottom: 20px;
 }
 
-div.filters-buttons {
+div.filters-buttons
+{
   text-align: center;
 }
 
-a.filter-button {
+div.filter-unset
+{
+  text-align: center;
+  margin-top: 50px;
+}
+
+a.filter-button,
+a.unset-button {
   border: 1px solid #FFF;
   padding: 10px;
   margin: 0 5px 0 5px;
