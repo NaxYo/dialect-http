@@ -1,6 +1,9 @@
 extends ./layout.jade
 
 block body
+  if session_filter
+    span.active-filter= '| [' + session_filter + '] filter is active'
+    span= count
   h1 Dashboard
 
   - each locale in authorized_locales

@@ -353,4 +353,8 @@ a.unset-button {
   margin: 0 5px 0 5px;
 }
 
-
+span.active-filter {
+  color: green;
+  font-size: 20px;
+  padding-left: 6px;
+}

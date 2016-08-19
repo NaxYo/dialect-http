@@ -26,16 +26,16 @@ module.exports = {
         name: 'Mails filter',
         url:'mails',
         search_term: [
-          new RegExp('(^mails)+([\.+\w]+)', 'i'),
-          'mails.things.thing'
+           '(^mails)+([\\.+\\w]+)',
+           '(mails)+([\\.+\\w]+)'
         ]
       },
       'another': {
         name: 'Another filter',
         url:'another',
         search_term: [
-          new RegExp('(^another)+([\.+\w]+)', 'i'),
-          'what.what.what'
+           '(^another)+([\\.+\\w]+)',
+           '(another)+([\\.+\\w]+)'
         ]
       }
     },
