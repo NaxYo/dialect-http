@@ -1,14 +1,10 @@
 - var filters = dialect.config('filters');
 div
-  h1 Translation filters
+    h1 Translation filters
 
 if filters
   div.filters-buttons
     -each filter in filters
       a.filter-button(href= '/set-filter/' + filter.url, class= session_filter === filter.url ? 'selected' : '')= filter.name
-  if session_filter
-    div.filter-unset
-      a.unset-button(href= '/unset-filter')= 'Unset ' + session_filter + ' filter'
-
 else
   span No filter yet ...

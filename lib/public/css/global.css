@@ -338,23 +338,37 @@ form .options a.reject span{
 div.filters-buttons
 {
   text-align: center;
-}
-
-div.filter-unset
-{
-  text-align: center;
-  margin-top: 50px;
+  padding-top: 15px;
 }
 
 a.filter-button,
 a.unset-button {
   border: 1px solid #FFF;
-  padding: 10px;
-  margin: 0 5px 0 5px;
+  padding: 15px;
+  margin: 0 15px 0 15px;
 }
 
 span.active-filter {
-  color: green;
+  color: #52FF78;
   font-size: 20px;
-  padding-left: 6px;
+  padding-left: 4px;
+}
+
+span.unset-filter {
+  color: #FB828A;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.fa.active-icon {
+  color: #52FF78;
+}
+
+.fa.unset-icon {
+  color: #FB828A;
+}
+
+div.unset {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }

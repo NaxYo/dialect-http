@@ -39,7 +39,7 @@ module.exports = {
         ]
       }
     },
-    locales: ['en', 'fr'],
+    locales: ['en', 'fr', 'es'],
     store: {
       mongodb: {
         collection: 'my_translations'
