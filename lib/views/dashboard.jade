@@ -1,6 +1,15 @@
 extends ./layout.jade
 
 block body
+  if session_filter
+    i.fa.fa-filter.fa-2x.active-icon
+    span.active-filter= '[' + session_filter + '] filter is active'
+    div.unset
+      a(href= '/unset-filter')
+        i.fa.fa-hand-paper-o.fa-2x.unset-icon
+        span.unset-filter= 'I want to unset [' + session_filter + '] filter!'
+
+    span= count
   h1 Dashboard
 
   - each locale in authorized_locales
@@ -24,3 +33,4 @@ block body
         a.pending(href= '/' + locale + '/pending/', style= 'width:' + percent_pending + '%;') &nbsp
         a.missing(href= '/' + locale + '/missing/', style= 'width:' + percent_missing + '%;') &nbsp
       .clearer
+  include ./filters.jade
