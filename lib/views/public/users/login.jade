@@ -1,15 +1,13 @@
 extends ../../layout.jade
 
 block body
-  form(action= '/auth/form/', method= 'post', style= 'margin-top: 30px')
+  form.login(action= '/auth/form/', method= 'post', style= 'margin-top: 50px')
     fieldset
       .field
-        label(for= 'username') User
-        input(id=  'username', name= 'username', value= '', type= 'text')
+        input(id=  'username', name= 'username', value= '', type= 'text', placeholder='User')
 
       .field
-        label(for= 'password') Password
-        input(id=  'password', name= 'password', value= '', type= 'password')
+        input(id=  'password', name= 'password', value= '', type= 'password', placeholder='Password')
 
-    .operations
+    .operations(style= 'margin-top: 15px')
         input.button(type= 'submit', value= 'Login')

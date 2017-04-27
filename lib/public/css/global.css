@@ -1,6 +1,5 @@
 body {
-  font-family: 'Monaco', 'Bitstream Vera Sans Mono', 'monospace';
-  background: #323B4C;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -40,7 +39,7 @@ nav#header .wrapper{
 }
 
 nav#header #logo {
-  font-family: 'Georgia', 'Times New Roman', 'serif';
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   float:left;
   margin-top: 10px;
@@ -48,7 +47,9 @@ nav#header #logo {
 }
 
 nav#header #logo span {
+  display: inline-block;
   vertical-align: top;
+  font-size: 34px;
 }
 
 nav#header #logout {
@@ -161,6 +162,26 @@ form {
   position:relative;
   float:left;
   width: 938px;
+}
+
+form.login {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+form.login .operations input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+form.login input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 2px;
+  display: inline-block;
 }
 
 form.ok {

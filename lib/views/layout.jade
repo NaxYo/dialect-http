@@ -3,15 +3,16 @@ html
     title= title || ''
     link(rel= 'stylesheet', href= '/css/reset.css' )
     link(rel= 'stylesheet', href= '/css/global.css' )
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto")
     script(src= 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src= '/js/loading.js')
     script(src= '/js/global.js')
-  body
+  body(style= 'background-color: '+base_color)
     nav#header
       .wrapper
         a#logo(href= '/')
             img(src= logo, height= '44')
-            span  | Translation platform
+            span(style='margin-top: '+platform_offset.top+'px; margin-left: '+platform_offset.left+'px;') Translation platform
         a#logout(href= '/auth/logout') logout
         ul#locales
           -each loc in authorized_locales

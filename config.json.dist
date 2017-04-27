@@ -1,0 +1,31 @@
+{
+  "title": "...",
+  "platform_offset": {
+    "top": "3",
+    "left": "16"
+  },
+  "logo_src": "...",
+  "base_color": '#...',
+  "users": [
+    { "username": "foo",
+      "password": "bar"
+    },
+    { "username": "test",
+      "password": "test",
+      "locales": ["es"],
+      "can_approve": false
+    }
+  ],
+  "port": 3000,
+  "io_port": 3001,
+
+  "dialect": {
+    "base_locale": "symbols",
+    "locales": ["en", "es", "ru", "pt", "ch"],
+    "store": {
+      "mongodb": {
+        "collection": ""
+      }
+    }
+  }
+}
